@@ -1,0 +1,78 @@
+// ------------------------------------------------------------------
+// INPUTS + BUTTONS
+// ------------------------------------------------------------------ 
+
+
+
+
+
+@mixin select
+	background: $branco url(../img/form-selectIcon.png) right center no-repeat
+	display: block
+	float: none
+	position: relative
+	padding: 10px 40px 10px 20px
+	+appearance(none)
+	+box-sizing(border-box)
+	min-height: $formHeight
+	border: 0
+	+border-radius(5px)
+	text-indent: 0
+
+select
+	+select
+
+
+
+input[type="text"]
+	background: $branco
+	display: block
+	float: none
+	position: relative
+	font-size: 16px
+	line-height: 20px
+	padding: 10px 20px
+	display: block
+	min-height: $formHeight
+	border: 2px solid $cinza
+	+box-sizing(border-box)
+	+border-radius(5px)
+	text-indent: 0
+
+
+@mixin checkbox
+	+appearance(none)
+	background: $cinzaClaro
+	+border-radius(5px)
+	width: 25px
+	height: 25px
+	+transition
+
+	&:checked
+		background: $corBotao url(../img/form-checked.png) center center no-repeat
+		+animate(pulseCheck)
+
+input[type="checkbox"]
+	+checkbox
+	
+@mixin radio
+	+appearance(none)
+	background: $branco
+	+border-radius(50%)
+	border: 2px solid $cinzaClaro
+	width: 21px
+	height: 21px
+	+transition
+	position: absolute
+	left: 10px
+	top: 50%
+	margin-top: -12px
+	background-position: center center
+
+	&:checked
+		background: url(../img/radio-checked.png) center center no-repeat
+		border: 2px solid $cinza
+		+animate(pulseCheck)
+
+input[type="radio"]
+	+radio

@@ -1,0 +1,169 @@
+
+
+// ------------------------------------------------------------------
+// colors
+// ------------------------------------------------------------------
+
+$branco: #fff
+$preto: #2c2c2c
+$black: #000
+
+$azul: #00a4e0
+$azulEscuro: #003e54
+$amarelo: #f4ff00
+$roxo: #a626ff
+$verdeLimao: #8cff26
+$magenta: #ff2687
+$azulLight: #26d9ff
+$laranja: #ff7826
+$vermelho: #d84949
+$vermelhoEscuro: #922222
+$verde: #4ed726
+$marrom: #402d21
+
+$brancoCinza: #f7f7f7
+$cinzaMuitoClaro: #dddddd
+$cinzaClaro: #b1b3b6
+$cinza: #b1b3b6
+$cinzaEscuro: #414042
+
+// ------------------------------------------------------------------
+// Scroll css3
+// ------------------------------------------------------------------ 
+
+$corScroll: $verde
+$corFundoScroll: $cinzaClaro
+
+::-webkit-scrollbar 
+	width: 10px
+	height: 0px
+	margin: 0px 0px 0px 0px
+
+
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment 
+	display: block
+	height: 0px
+
+
+::-webkit-scrollbar-button:vertical:increment 
+	background-color: none
+
+
+::-webkit-scrollbar-track-piece 
+	background-color: $corFundoScroll
+
+
+::-webkit-scrollbar-thumb:vertical 
+	height: 50px
+	background-color: $corScroll
+	cursor: pointer
+
+
+::-webkit-scrollbar-thumb:horizontal 
+	width: 50px
+	background-color: $corScroll
+	cursor: pointer
+
+
+// ------------------------------------------------------------------
+// Tipography
+// ------------------------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Exo:100,500,800,100italic,500italic,800italic|Lobster+Two:400italic)
+
+
+@mixin font($weight:500)
+	font-family: 'Exo', 'helvetica', 'Trebuchet MS', 'Arial', sans-serif
+	font-weight: $weight
+
+@mixin fontTitle($size:50px)
+	font-family: 'Lobster Two', cursive
+	font-size: $size
+	text-decoration: italic
+
+
+// ------------------------------------------------------------------
+// Defaults do Compass
+// ------------------------------------------------------------------
+$default-transition-property : all
+$default-transition-duration : 0.2s
+$default-transition-function : false
+$default-transition-delay    : false
+
+$default-text-shadow-color: #fff
+$default-text-shadow-h-offset: 1px
+$default-text-shadow-v-offset: 1px
+$default-text-shadow-blur: 1px
+
+$default-box-shadow-color: rgba(0,0,0,0.3)
+$default-box-shadow-h-offset: 0
+$default-box-shadow-v-offset: 2px
+$default-box-shadow-blur: 4px
+$default-box-shadow-spread: 0
+$default-box-shadow-inset: false
+
+
+
+
+// ------------------------------------------------------------------
+// Styles Base
+// ------------------------------------------------------------------
+
+body
+	font-size: 14px
+	color: $cinzaEscuro
+	@include font
+
+*
+	font-size: 12px
+	color: $cinzaEscuro
+	@include font
+
+	p
+		line-height: 150%
+		font-size: 14px
+		margin-bottom: 20px
+		@include font(300)
+		
+b
+	@include font(800)
+
+a
+	text-decoration: none
+	+transition
+	color: $cinzaEscuro
+	@include font
+
+	&:hover
+		color: $vermelho
+		text-decoration: none
+
+
+h1, h2, h3, h4, h5, h6
+	@include font(100)
+	color: $preto
+	margin-bottom: 20px
+	text-align: left
+	line-height: 110%
+	text-transform: uppercase
+
+h1
+	font-size: 36px
+
+h2
+	font-size: 30px
+
+h3
+	font-size: 24px
+
+h4
+	font-size: 20px
+
+h5
+	font-size: 18px
+
+h6
+	font-size: 14px
+
+
+
