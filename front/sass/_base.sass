@@ -31,7 +31,7 @@ $cinzaEscuro: #414042
 // Scroll css3
 // ------------------------------------------------------------------ 
 
-$corScroll: $verde
+$corScroll: $vermelho
 $corFundoScroll: $cinzaClaro
 
 ::-webkit-scrollbar 
@@ -79,7 +79,8 @@ $corFundoScroll: $cinzaClaro
 @mixin fontTitle($size:50px)
 	font-family: 'Lobster Two', cursive
 	font-size: $size
-	text-decoration: italic
+	font-style: italic
+	text-transform: none
 
 
 // ------------------------------------------------------------------
@@ -113,6 +114,7 @@ body
 	font-size: 14px
 	color: $cinzaEscuro
 	@include font
+	line-height: 150%
 
 *
 	font-size: 12px

@@ -9,6 +9,9 @@
 .span280px
 	width: 280px
 
+.span290px
+	width: 290px
+
 .span260px
 	width: 260px
 
@@ -27,8 +30,7 @@ header
 				line-height: 20px
 				>
 					a
-						font-size: 12px
-						font-family: 'Droid Sans',sans-serif
+						font-size: 14px
 						text-transform: uppercase
 						border-left: 1px solid #f0f0f0
 						padding: 22px 20px 18px 20px
@@ -100,6 +102,19 @@ header
 	.pic-cat
 		text-align: center
 		position: relative
+		height: 200px
+		display: block
+		background: url(../img/imgTemp/header-img-interna.jpg) center center no-repeat
+
+		.bg-dot
+			z-index: 1
+			background: rgba(200,0,0,0.6) url(../img/dot.png) center center
+			background-attachment: fixed
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
 		.brc
 			position: absolute
 			bottom: 20%
@@ -198,15 +213,22 @@ header
 			input, select
 				display: block
 				float: left
-				width: 19%
+				width: 15%
 				margin: 0 1%
 				height: 40px
 				padding: 10px 20px
+				line-height: 20px
+				font-size: 13px
+				font-weight: bold
+
+			select.perfil
+				width: 20%
 
 			input[type="submit"]
-				width: 14%
+				width: 8%
 				background-color: rgba($black, 0.8)
 				font-size: 14px
+				padding: 0
 
 			h1
 				+font(100)
@@ -481,14 +503,14 @@ header
 				position: relative
 				overflow: hidden
 				span.price
-					background: $vermelho
-					color: #ffffff
+					background: rgba($vermelho,0.9)
+					color: $branco
+					font-size: 25px
 					position: absolute
-					left: 0
-					bottom: 0
-					opacity: 0.9
+					right: 10px
+					bottom: 10px
 					filter: alpha(opacity = 90)
-					padding: 10px 15px
+					padding: 15px 20px
 					font-weight: 14px
 				img
 					-webkit-transition: all 900ms ease-out
@@ -502,10 +524,11 @@ header
 					-o-transform: scale(1.1)
 			h3
 				padding: 20px 20px 20px 20px
+				margin-bottom: 0
 				a
 					color: #333333
-					text-transform: uppercase
 					font-weight: 200
+					+fontTitle(24px)
 					&:hover
 						color: $vermelho
 			.title-info
@@ -724,158 +747,39 @@ header
 			padding: 30px 20px
 			margin-bottom: 20px
 			background-color: #ffffff
+			+clearfix
 			h3
 				text-transform: uppercase
 				font-size: 12px
 				padding: 0px 0px 20px 0px
-			&.formsearchwg
-				height: 10px
-				padding-bottom: 0
-				position: relative
-				input.finput
-					width: 235px
-					position: absolute
-					top: 5px
-					border: none
-					box-shadow: none
-					border-radius: 0
-				button.fsubmit
-					width: 20px
-					position: absolute
-					top: 8px
-					right: 15px
-					border: none
-					background: none
-					span
-						font-size: 20px
-						color: #999999
-					&:hover span
-						color: $vermelho
-			&.searchbox
-				background-color: #000000
-				.find
-					margin-top: 0px
-					background: none
-					.tabberlive .tabbertab
-						margin-top: 30px
-					input.keywordfind
-						width: 94%
-					ul.tabbernav li
-						&.tabberactive a:hover, a:hover
-							color: #ffffff
-							border: none
-				.row-fluid .span12
-					margin: 0px
-			&.our-box ul li
-				margin-bottom: 20px
-				padding-bottom: 20px
-				border-bottom: 1px dotted #dddddd
-				&:last-child
-					border: none
-					padding-bottom: 0
-					margin-bottom: 0
-				.our-info
-					overflow: auto
-					h4
-						margin: 0
-						padding: 0
-						font-size: 12px
-						color: #999999
-						text-transform: uppercase
-						line-height: 20px
-					h5
-						font-size: 12px
-						padding: 1px 0px 0px 0px
-						text-transform: none
-				.our-img
-					float: left
-					margin-right: 10px
-			&.tabsidebar
-				.tabberlive ul.tabbernav li
-					&.tabberactive a:hover
-						color: #ffffff
-					a:hover
-						border: none
-						color: #333333
-				ul.tabbernav li.tabberactive a
-					background-color: #333333
-					&:before
-						border-color: #333333 transparent #333333 transparent
-			.product_list_wg li
-				margin-bottom: 20px
-				padding-bottom: 20px
-				border-bottom: 1px dotted #dddddd
-				&:last-child
-					border: none
-					margin-bottom: 0
-					padding-bottom: 0
-				a
-					font-size: 12px
-					text-transform: uppercase
-					img
-						float: left
-						margin-right: 10px
-				.amount
-					font-size: 12px
-			&.posts_by
-				background-color: #ffffff
-				ul li
-					padding-bottom: 7px
-					margin-bottom: 7px
-					border-bottom: 1px solid #eeeeee
-					&:last-child
-						border: none
-						margin-bottom: 0
-						padding-bottom: 0
-					a
-						color: #333333
-						&:hover
-							color: $vermelho
-					span
-						color: #666666
-				h6
-					font-weight: 700
-					text-transform: uppercase
-					color: #333333
-					margin: 0px
-					padding: 0 0 15px 0
-				&.month ul li a
-					-webkit-transition: all 400ms ease-out
-					-moz-transition: all 400ms ease-out
-					-o-transition: all 400ms ease-out
-					-ms-transition: all 400ms ease-out
-					transition: all 400ms ease-out
-					&:hover
-						margin-left: 15px
-						-moz-transform: scale(1)
-						-o-transform: scale(1)
-						-webkit-transform: scale(1)
-						transform: scale(1)
-				&.categorybox
-					background-color: #000000
-					h6
-						color: #ffffff
-					ul li
-						border-color: #151515
-						a
-							color: #999999
-							&:hover
-								color: $vermelho
-			.blog_list_wg, .fag_list_wg
-				li
+
+			h1
+				font-size: 26px
+
+			&.busca-sidebar
+				background: $vermelho
+				
+				h1
+					color: $branco
+
+				input, select
+					width: 100%
+					display: block
+					+box-sizing(border-box)
+					height: 40px
+					padding: 10px 20px
+
+				input[type="submit"]
+					background: $vermelhoEscuro
+
+			&.apoio-sidebar
+				img
+					display: block
+					width: 188px
+					margin: 0 auto
 					margin-bottom: 20px
-					padding-bottom: 20px
-					border-bottom: 1px dotted #dddddd
-					&:last-child
-						border: none
-						margin-bottom: 0
-						padding-bottom: 0
-					a
-						img
-							float: left
-							margin-right: 10px
-				.author
-					margin-top: 5px
+
+
 		.property_detail
 			background-color: #ffffff
 			padding-bottom: 150px
@@ -1095,8 +999,6 @@ header
 				padding: 0 0 40px 0
 			.contact-bor
 				margin-bottom: 40px
-				padding-bottom: 40px
-				border-bottom: 1px solid #dddddd
 				.infotext
 					margin-bottom: 40px
 				.map
@@ -1118,12 +1020,13 @@ header
 						&:hover
 							color: #333333
 			.contact-form
-				input
+				input, select
 					border: 1px solid #e5e5e5
 					box-shadow: none
 					border-radius: 0
-					width: 95%
-					height: 30px
+					width: 100%
+					height: 40px
+					+box-sizing(border-box)
 					&:focus
 						border-color: $vermelho
 						box-shadow: none
@@ -1131,7 +1034,8 @@ header
 					border: 1px solid #e5e5e5
 					box-shadow: none
 					border-radius: 0
-					width: 97%
+					width: 100%
+					+box-sizing(border-box)
 					&:focus
 						border-color: $vermelho
 						box-shadow: none
@@ -1513,3 +1417,4 @@ header
 	text-indent: -9999px
 	&:hover
 		background-image: url('../img/icon/backtotophv.png')
+
